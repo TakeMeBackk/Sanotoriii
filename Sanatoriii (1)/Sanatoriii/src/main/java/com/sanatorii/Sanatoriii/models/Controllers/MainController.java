@@ -1,4 +1,4 @@
-package com.sanatorii.Sanatoriii.Controllers;
+package com.sanatorii.Sanatoriii.models.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
