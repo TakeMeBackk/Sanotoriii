@@ -49,4 +49,31 @@ public class ProductController {
         model.addAttribute("text", res);
         return "text-details";
     }
+    @GetMapping("/product/{id}/edit")
+    public String TextEdit(@PathVariable(value = "id") long id, Model model) {
+        if(!textRepository.existsById(id)){
+            return "redirect:/product";
+        }
+        Optional<Text> text=textRepository.findById(id);
+        ArrayList<Text> res = new ArrayList<>();
+        text.ifPresent(res::add);
+        model.addAttribute("text", res);
+        return "text-edit";
+    }
+    @PostMapping("/product/{id}/edit")
+    public String textPostUpdate(@PathVariable(value = "id") long id, @RequestParam String title, @RequestParam String anons, @RequestParam String full_text, Model model){
+        Text Text = textRepository.findById(id).orElseThrow();
+        Text.setTitle(title);
+        Text.setAnons(anons);
+        Text.setFull_text(full_text);
+        textRepository.save(Text);
+
+        return "redirect:/product";
+    }
+    @PostMapping("/product/{id}/remove")
+    public String textPostDelete(@PathVariable(value = "id") long id, Model model){
+        Text Text = textRepository.findById(id).orElseThrow();
+       textRepository.delete(Text);
+        return "redirect:/product";
+    }
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редагування тексту</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header" ></header>
+
+<div class="container mt-5 mb-5">
+    <h1>Редагування тексту</h1>
+    <div th:each="el : ${text}">
+        <form method="post">
+            <input type="text" th:value="${el.title}" name="title" placeholder="Введіть повне ім'я" class="form-control"><br>
+            <input type="text" th:value="${el.anons}" name="anons" placeholder="Введіть вашу електронну пошту" class="form-control"><br>
+            <textarea name="full_text" placeholder="Введіть всі побажання" class="form-control" th:text="${el.full_text}" /><br>
+            <button type="submit" class="btn-success">Оновити</button>
+        </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer" ></footer>
+</body>
+</html>
