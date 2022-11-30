@@ -9,13 +9,12 @@
 <header th:insert="blocks/header :: header" ></header>
 
 <div class="container mt-5">
-    <div th:each="el : ${text}" class="alert alert-info mt-2">
-        <h1 th:text="${el.title}"/>
-        <p th:text="${el.full_text}"/>
-        <p<b>Перегляди:</b> <span th:text="${el.viems}"/></p>
-        <a th:href="'/product/'+ ${el.id} +'/edit'" class="btn btn-warning">Редагувати</a><br><br>
+    <div th:each="el : ${text}" class="alert alert-light mt-2">
+        <h1 th:text="${el.title}" class="text-dark"/>
+        <p th:text="${el.full_text}" class="text-dark"/>
+        <a th:href="'/product/'+ ${el.id} +'/edit'" class="btn btn-outline-warning">Редагувати</a><br><br>
         <form th:action="'/product/'+ ${el.id} + '/remove'" method="post">
-            <button class="btn btn-warning" type="submit">Видалення</button>
+            <button class="btn btn-outline-danger" type="submit">Видалення</button>
         </form>
     </div>
 </div>

@@ -9,7 +9,7 @@ public class MainController {
 
     @GetMapping("/home")
     public String home(Model model) {
-        model.addAttribute("title", "Помиканов");
+        model.addAttribute("title", "Санаторій");
         return "home";
     }
 
@@ -39,15 +39,6 @@ public class MainController {
             return "terapiya";
         }
     }
-    @Controller
-    public class ReviewsController {
-
-        @GetMapping("/reviews")
-        public String ReviewsMain(Model model) {
-            model.addAttribute("title", "Відгуки");
-            return "reviews";
-        }
-    }
 
     @Controller
     public class СontactsController {
@@ -56,15 +47,6 @@ public class MainController {
         public String ContactsMain(Model model) {
             model.addAttribute("title", "Контакти");
             return "contacts";
-        }
-    }
-    @Controller
-    public class BookController {
-
-        @GetMapping("/book")
-        public String BookMain(Model model) {
-            model.addAttribute("title", "Забронювати");
-            return "book";
         }
     }
 }

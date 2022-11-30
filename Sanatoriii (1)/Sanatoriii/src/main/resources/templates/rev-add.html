@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Відгуки</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header" ></header>
+
+<div class="container mt-5 mb-5">
+    <h1>Залишиити відгук</h1>
+    <form action="/rev/add" method="post">
+        <input type="text" name="shortt" placeholder="Висновки, рекомендації, поради для майбутніх відпочиваючих" class="form-control"><br>
+        <textarea name="full_rev" placeholder="Підсумковий відгук" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-outline-success">Додати</button>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer" ></footer>
+</body>
+</html>

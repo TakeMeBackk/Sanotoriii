@@ -10,8 +10,16 @@
 
 <div class="container mt-5">
     <h1>Відгуки</h1>
+    <div th:each="el : ${revs}" class="alert alert-info mt-2">
+        <h3 th:text="${el.shortt}"/>
+        <p th:text="${el.full_rev}"/>
 
+        <form th:action="'/rev/'+ ${el.id2} + '/remove'" method="post">
+            <button class="btn btn-warning" type="submit">Видалення</button>
+        </form>
+    </div>
 </div>
+
 <footer th:insert="blocks/footer :: footer" ></footer>
 </body>
 </html>

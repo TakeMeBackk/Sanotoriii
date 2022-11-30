@@ -10,10 +10,10 @@
 
 <div class="container mt-5">
     <h1>Проживання</h1>
-    <div th:each="el : ${texts}" class="alert alert-info mt-2">
+    <div th:each="el : ${texts}" class="alert alert-primary mt-2">
         <h3 th:text="${el.title}"/>
         <p th:text="${el.anons}"/>
-        <a th:href="'/product/'+ ${el.id}" class="btn-warning">Докладніше</a>
+        <a th:href="'/product/'+ ${el.id}" class="btn btn-outline-primary">Докладніше</a>
     </div>
     </div>
 
