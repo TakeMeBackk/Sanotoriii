@@ -34,7 +34,7 @@ public class RevController {
     public String revPostAdd(@RequestParam String shortt, @RequestParam String full_rev, Model model){
         Rev rev = new Rev(shortt, full_rev);
         RevRepository.save(rev);
-        return "redirect:/home";
+        return "redirect:/reviews";
     }
     @PostMapping("/rev/{id2}/remove")
     public String revPostDelete(@PathVariable(value = "id2") long id, Model model){

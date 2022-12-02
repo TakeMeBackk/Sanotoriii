@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header" ></header>
+<div class="container mt-5">
+    <h1 style="margin: 0px 0px 10px 15px;">Номери</h1>
+    <div class="alert alert-info ">
+        <img style="margin: 0px 15px 0px 15px;" src="https://san-karpaty.com/wp-content/uploads/2018/03/Odnomisnyj-Standart-428-1.jpg" class="rounded float-start" alt="1" height="350" width="400">
+    <h4>Одномісний</h4>
+        <p>Комфортабельний одномісний номер з усіма зручностями та видом на гори та озеро.</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/002-plans.svg" alt=""> 15м2</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/004-house-plan.svg" alt=""> одна кімната</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/001-bathtub.svg" alt=""> ванна</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/003-bed.svg" alt=""> односпальне</p><br>
+        <p>1872 грн</p>
+</div>
+    <div class="alert alert-info">
+        <img style="margin: 0px 15px 0px 15px;" src="https://san-karpaty.com/wp-content/uploads/2018/02/double-standart-sanatorij-karpaty-truskavets-02.jpg" class="rounded float-start" alt="1" height="350" width="400">
+        <h4>Двомісний</h4>
+        <p>Комфортабельний двомісний номер з усіма зручностями та видом на гори та озеро.</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/002-plans.svg" alt=""> 18м2</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/004-house-plan.svg" alt=""> одна кімната</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/001-bathtub.svg" alt=""> ванна</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/003-bed.svg" alt=""> двоспальне або два односпальних</p><br>
+        <p>2155 грн. на 1 особу; 2850 грн. на 2 осіб </p>
+    </div>
+    <div class="alert alert-info ">
+        <img style="margin: 0px 15px 0px 15px;" src="https://san-karpaty.com/wp-content/uploads/2018/03/Pivlyuks-830-4.jpg" class="rounded float-start" alt="1" height="350" width="400">
+        <h4>Півлюкс</h4>
+        <p>Великий комфортабельний номер класу "Півлюкс" з видом на гори та озеро.</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/002-plans.svg" alt=""> 32м2</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/004-house-plan.svg" alt=""> одна кімната</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/001-bathtub.svg" alt=""> ванна</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/003-bed.svg" alt=""> двоспальне та крісло-диван</p><br>
+        <p>2900 грн. на 1 особу; 3850 грн. на 2 осіб </p>
+    </div>
+    <div class="alert alert-info ">
+        <img style="margin: 0px 15px 0px 15px;" src="https://san-karpaty.com/wp-content/uploads/2022/02/Dvokimnatnyj-Lyuks-7-scaled.jpg" class="rounded float-start" alt="1" height="350" width="400">
+        <h4>Люкс</h4>
+        <p>Двокімнатний комфортабельний номер класу "Люкс" з видом на гори та озеро.</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/002-plans.svg" alt=""> 39м2</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/004-house-plan.svg" alt=""> дві кімнати</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/001-bathtub.svg" alt=""> ванна</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/003-bed.svg" alt=""> двоспальне та диван</p><br>
+        <p>3370 грн. на 1 особу; 4120 грн. на 2 осіб </p>
+    </div>
+    <div class="alert alert-info ">
+        <img style="margin: 0px 15px 0px 15px;" src="https://san-karpaty.com/wp-content/uploads/2022/02/03-Apartament-Novyj-scaled.jpg" class="rounded float-start" alt="1" height="350" width="400">
+        <h4>Апартаменти</h4>
+        <p>Шикарний трикімнатний номер класу "Апартаменти" з видом на гори та озеро.</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/002-plans.svg" alt=""> 123м2</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/004-house-plan.svg" alt=""> три кімнати, їдальня та кухня</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/001-bathtub.svg" alt=""> три санвузли (ванна та душ)</p>
+        <p><img style="width: 35px;" src="https://san-karpaty.com/wp-content/uploads/2021/06/003-bed.svg" alt=""> два двоспальних та диван</p><br>
+        <p>7112 грн.</p>
+    </div>
+</div>
+
+
+<div th:insert="blocks/footer :: footer" ></div>
+
+
+</body>
+</html>

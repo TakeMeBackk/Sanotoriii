@@ -11,11 +11,11 @@
 <div class="container mt-5">
     <h1>Відгуки</h1>
     <div th:each="el : ${revs}" class="alert alert-info mt-2">
-        <h3 th:text="${el.shortt}"/>
-        <p th:text="${el.full_rev}"/>
+        <h3 th:text="${el.shortt} " class="text-dark"/>
+        <p th:text="${el.full_rev}" class="text-dark"/>
 
         <form th:action="'/rev/'+ ${el.id2} + '/remove'" method="post">
-            <button class="btn btn-warning" type="submit">Видалення</button>
+            <button class="btn btn-outline-danger" type="submit">Видалення</button>
         </form>
     </div>
 </div>

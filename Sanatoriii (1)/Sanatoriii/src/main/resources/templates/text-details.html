@@ -12,7 +12,7 @@
     <div th:each="el : ${text}" class="alert alert-light mt-2">
         <h1 th:text="${el.title}" class="text-dark"/>
         <p th:text="${el.full_text}" class="text-dark"/>
-        <a th:href="'/product/'+ ${el.id} +'/edit'" class="btn btn-outline-warning">Редагувати</a><br><br>
+        <a th:href="'/product/'+ ${el.id} +'/edit'" class="btn btn-outline-primary">Редагувати</a><br><br>
         <form th:action="'/product/'+ ${el.id} + '/remove'" method="post">
             <button class="btn btn-outline-danger" type="submit">Видалення</button>
         </form>
